@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_Zoo_Manger"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="905" Width="1995">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="447*"/>
+            <RowDefinition Height="442*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="label" Content="Zoo List" HorizontalAlignment="Left" Margin="28,60,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.348,0.402" Width="94" FontSize="20" FontWeight="Bold"/>
+        <ListBox Name="Zoolist"  Margin="28,102,1687,401" Grid.RowSpan="2" RenderTransformOrigin="0.536,0.524" SelectionChanged="Zoolist_SelectionChanged"/>
+        <ListBox Name="Animallist"  HorizontalAlignment="Left" Width="310" Grid.RowSpan="2" Margin="345,102,0,401"/>
+
     </Grid>
+
 </Window>
