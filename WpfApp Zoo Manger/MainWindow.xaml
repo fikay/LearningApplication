@@ -5,15 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_Zoo_Manger"
         mc:Ignorable="d"
-        Title="MainWindow" Height="905" Width="1995">
+        Title="MainWindow" Height="905" Width="1000">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="447*"/>
             <RowDefinition Height="442*"/>
         </Grid.RowDefinitions>
         <Label x:Name="label" Content="Zoo List" HorizontalAlignment="Left" Margin="28,60,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.348,0.402" Width="94" FontSize="20" FontWeight="Bold"/>
-        <ListBox Name="Zoolist"  Margin="28,102,1687,401" Grid.RowSpan="2" RenderTransformOrigin="0.536,0.524" SelectionChanged="Zoolist_SelectionChanged"/>
-        <ListBox Name="Animallist"  HorizontalAlignment="Left" Width="310" Grid.RowSpan="2" Margin="345,102,0,401"/>
+        <ListBox Name="Zoolist"  Margin="28,102,692,401" Grid.RowSpan="2" RenderTransformOrigin="0.536,0.524" SelectionChanged="Zoolist_SelectionChanged"/>
+        <ListBox Name="Animallist"  HorizontalAlignment="Left" Width="280" Grid.RowSpan="2" Margin="345,102,0,401"/>
+        <Label Name="Associated_Animal" Content="Associated Animal" HorizontalAlignment="Left" Margin="345,60,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.309,0.194" Width="214" FontSize="20" FontWeight="Bold"/>
+        <ListBox x:Name="AllAnimals" Margin="657,102,108,121" Grid.RowSpan="2" SelectionChanged="AllAnimals_SelectionChanged"/>
+        <Button x:Name="Addbutton" Content="Add Animal To Zoo" HorizontalAlignment="Left" Margin="657,64,0,0" VerticalAlignment="Top" Height="29" Width="235" Background="#FFB3A0A0" FontWeight="Bold" FontSize="18" Click="Addbutton_Click"/>
+        <Button x:Name="DeleteZoo" Content="Delete Zoo" HorizontalAlignment="Left" Margin="28,63,0,0" Grid.Row="1" VerticalAlignment="Top" Height="46" Width="280" Background="#FFE2AAAA" FontSize="18" FontWeight="Bold" Click="DeleteZoo_Click" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="2.362"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.949"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBox x:Name="addBox" HorizontalAlignment="Left" Margin="28,130,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="597" Height="54"/>
+        <Button x:Name="RemoveAnimal" Content="Remove Animal" HorizontalAlignment="Left" Margin="345,64,0,0" Grid.Row="1" VerticalAlignment="Top" Height="44" Width="280" FontSize="18" FontWeight="Bold" Click="RemoveAnimal_Click"/>
+        <Button x:Name="AddZoo" Content="Add Zoo" HorizontalAlignment="Left" Margin="28,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="44" Width="280" FontSize="18" FontWeight="Bold" Click="AddZoo_Click"/>
+        <Button x:Name="AddAnimal" Content="Add Animal" HorizontalAlignment="Left" Margin="345,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="44" Width="280" FontSize="18" FontWeight="Bold" Click="AddAnimal_Click"/>
+        <Button x:Name="DeleteAnimal" Content="Delete Animal" HorizontalAlignment="Left" Margin="653,333,0,0" Grid.Row="1" VerticalAlignment="Top" Height="40" Width="241" Background="#FFE2AAAA" FontSize="18" FontWeight="Bold" Click="DeleteAnimal_Click" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="2.362"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.949"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="UpdateAnimal" Content="Update Animal" HorizontalAlignment="Left" Margin="345,248,0,0" Grid.Row="1" VerticalAlignment="Top" Height="44" Width="280" FontSize="18" FontWeight="Bold" Click="UpdateAnimal_Click"/>
+        <Button x:Name="UpdateZoo" Content="Update Zoo" HorizontalAlignment="Left" Margin="28,248,0,0" Grid.Row="1" VerticalAlignment="Top" Height="44" Width="280" FontSize="18" FontWeight="Bold" Click="UpdateZoo_Click"/>
 
     </Grid>
 
